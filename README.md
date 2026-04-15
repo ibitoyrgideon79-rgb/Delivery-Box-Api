@@ -19,11 +19,6 @@ From `Box/box`:
 
 App starts on `http://localhost:8080`.
 
-If `8080` is already in use:
-
-```powershell
-.\mvnw.cmd spring-boot:run -Dspring-boot.run.arguments="--server.port=8083"
-```
 
 Root health/info endpoint:
 - `GET /` returns a small JSON payload showing the service is running and listing key endpoints.
@@ -78,10 +73,14 @@ Last run (2026-04-15):
 ### Get battery level
 `GET /api/boxes/{boxId}/battery`
 
+## ER Diagram
+
+![ER Diagram](docs/er-diagram.png)
+
 ## Postman Testing
 
 Base URL:
-- `http://localhost:8080` (or `http://localhost:8083` if you started on 8083)
+- `http://localhost:8080`
 
 For JSON requests, set header:
 - `Content-Type: application/json`
