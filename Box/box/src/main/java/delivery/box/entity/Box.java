@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -28,20 +29,24 @@ public class Box {
 
     @NotBlank
     @Size(max = 20)
+    @Column(name = "txref", length = 20, nullable = false)
     private String txref;
 
     @NotNull
     @Max(500)
     @Min(0)
+    @Column(name = "weight_limit", nullable = false)
     private Integer weightLimit;
 
     @NotNull
     @Min(0)
     @Max(100)
+    @Column(name = "battery_capacity", nullable = false)
     private Integer batteryCapacity;
 
     @NotNull
     @Enumerated(EnumType.STRING)
+    @Column(name = "state", nullable = false)
     private BoxState state;
 
     @OneToMany(mappedBy = "box", cascade = CascadeType.ALL, orphanRemoval = true)
