@@ -8,6 +8,7 @@ REST API for managing delivery boxes and loading items, with business rules:
 - Java 25 + Spring Boot (Maven)
 - Spring WebMVC + Validation + Spring Data JPA
 - H2 in-memory database (with seed data)
+- Postman (for api testing)
 
 ## Run
 
@@ -36,7 +37,6 @@ H2 console is enabled at `http://localhost:<PORT>/h2-console` and uses:
 
 ## Test Results
 
-Last run (2026-04-15):
 - `BUILD SUCCESS`
 - `Tests run: 3, Failures: 0, Errors: 0, Skipped: 0`
 
